@@ -6,11 +6,11 @@ namespace: class-8
 labels:
   - pairs:
       skala.io/component: skala-devops
-      skala.io/managed-by: class-8-sk274
+      skala.io/managed-by: class-8-sk248
     includeSelectors: false
 
 commonAnnotations:
-  skala.io/owner: sk274
+  skala.io/owner: sk248
   skala.io/registry: skala-registry.skala-ai.com
 
 resources:

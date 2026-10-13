@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sk274-myfirst-configmap
+  name: sk248-myfirst-configmap
   namespace: class-8
 data:
   application-prod.yaml: |
@@ -10,7 +10,7 @@ data:
 
     developer:
       owner:
-        name: sk274
+        name: sk248
         role: kubernetes
         level: high
       team:
