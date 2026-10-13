@@ -5,7 +5,7 @@ pipeline {
     // === 사용자 수정 영역 ===
     GIT_URL                = 'https://github.com/dd-inga/myfirst-api-server.git'
     GIT_BRANCH             = 'main'            // 또는 main
-    GIT_ID                 = 'skala-github-id'   // GitHub PAT credential ID
+    GIT_ID                 = 'sk248-github-id'   // GitHub PAT credential ID
     IMAGE_NAME             = 'sk248-webserver'
     // =======================
     IMAGE_TAG              = '1.0'
@@ -55,7 +55,7 @@ pipeline {
         }
         sh '''
             set -eux
-            IMAGE_REF="${IMAGE_REGISTRY_URL}/${IMAGE_REGISTRY_PROJECT}/webserver:${FINAL_IMAGE_TAG}"
+            IMAGE_REF="${IMAGE_REGISTRY_URL}/${IMAGE_REGISTRY_PROJECT}/${IMAGE_NAME}:${FINAL_IMAGE_TAG}"
 
             # 1. 인증: username/password로 config.json 생성 (buildkit은 DOCKER_CONFIG의 config.json으로 레지스트리 인증)
             mkdir -p ~/.docker
@@ -99,7 +99,7 @@ EOF
             git config --global --add safe.directory '*'
             git remote set-url origin "https://${GIT_USER}:${GIT_PASS}@${REPO_PATH}"
 
-            IMAGE_BASE="${IMAGE_REGISTRY_URL}/${IMAGE_REGISTRY_PROJECT}/webserver"
+            IMAGE_BASE="${IMAGE_REGISTRY_URL}/${IMAGE_REGISTRY_PROJECT}/${IMAGE_NAME}"
 
             # 1. 원격 gitops 브랜치가 있으면 그 히스토리를 이어받고, 없으면 현재 브랜치 기준으로 생성
             git fetch origin "${GITOPS_BRANCH}" || true
