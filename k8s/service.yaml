@@ -6,12 +6,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sk274-myfirst-api-server
+  name: sk248-myfirst-api-server
   namespace: class-8
 spec:
   type: ClusterIP
   selector:
-    app: sk274-myfirst-api-server
+    app: sk248-myfirst-api-server
   ports:
     - name: http
       port: 8080

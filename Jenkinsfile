@@ -6,7 +6,7 @@ pipeline {
     GIT_URL                = 'https://github.com/dd-inga/myfirst-api-server.git'
     GIT_BRANCH             = 'main'            // 또는 main
     GIT_ID                 = 'skala-github-id'   // GitHub PAT credential ID
-    IMAGE_NAME             = 'sk274-webserver'
+    IMAGE_NAME             = 'sk248-webserver'
     // =======================
     IMAGE_TAG              = '1.0'
     IMAGE_REGISTRY_URL     = 'skala-registry.skala-ai.com'
